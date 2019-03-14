@@ -1,0 +1,33 @@
+<!doctype html>
+<html>  
+    <head>
+        <meta charset="UTF-8" >
+        <title>Douument</title>
+    </head>
+    <body>
+        <script src="js/Ud-1.js"></script>
+        <script >
+            function f(){
+                var y=Number(prompt("year"));
+                var m=Number(prompt("month"));
+                var d=Number(prompt("day"));
+                var total=d;
+                switch(m){
+                    case 5:total+=30;
+                    case 4:total+=31;
+                    case 3:if(isrun(y)){
+                        total+=29;
+                    }else{
+                        total+=28;
+                    }
+                    case 2:total+=31
+                    break;
+                    default:
+                    console.log("wrong");
+                }
+                console.log("total day is the"+total+"day of the year");
+            }
+        </script>
+        <button onclick="f()">执行</button>
+    </body>
+</html>
